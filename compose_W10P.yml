@@ -27,7 +27,7 @@ services:
       - /docker/dockurr_W10P/_storage_:/storage
       - /docker/dockurr_W10P/shared:/shared
       - /docker/dockurr_W10P/_oem_:/oem
-      # ISO size = 6GB
+      # ISO size = 5.8GB
       - /docker/_ISO_/win10x64.iso:/custom.iso
 
 #mkdir -p /docker/dockurr_W10P/_storage_

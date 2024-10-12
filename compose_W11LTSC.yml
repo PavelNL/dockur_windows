@@ -27,7 +27,7 @@ services:
       - /docker/dockurr_W11LTSC/_storage_:/storage
       - /docker/dockurr_W11LTSC/shared:/shared
       - /docker/dockurr_W11LTSC/_oem_:/oem
-      # ISO size = 4.3GB
+      # ISO size = 4.2GB
       - /docker/_ISO_/win11x64-enterprise-ltsc-eval.iso:/custom.iso
 
 #mkdir -p /docker/dockurr_W11LTSC/_storage_

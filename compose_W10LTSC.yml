@@ -27,7 +27,7 @@ services:
       - /docker/dockurr_W10LTSC/_storage_:/storage
       - /docker/dockurr_W10LTSC/shared:/shared
       - /docker/dockurr_W10LTSC/_oem_:/oem
-      # ISO size = 4.8GB
+      # ISO size = 4.7GB
       - /docker/_ISO_/win10x64-enterprise-ltsc-eval.iso:/custom.iso
 
 #mkdir -p /docker/dockurr_W10LTSC/_storage_
