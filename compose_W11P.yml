@@ -1,0 +1,35 @@
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows11pro
+    environment:
+      VERSION: "win11"
+      #VERSION: "https://example.com/win.iso"
+      RAM_SIZE: "6G"
+      CPU_CORES: "2"
+      DISK_SIZE: "48G"
+      MANUAL: "N"
+      USERNAME: "user"
+      PASSWORD: "1"
+      LANGUAGE: "English"
+      REGION: "en-US"
+      KEYBOARD: "en-US"
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
+    stop_grace_period: 2m
+    volumes:
+      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11P/_storage_:/storage
+      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11P/shared:/shared
+      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11P/_oem_:/oem
+      #- /media/LNXDATA/PAVEL_LDATA/_DOCKER_/_ISO_/win10pro.iso:/custom.iso
+
+#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11P/_storage_
+#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11P/shared
+#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11P/_oem_
+#chmod -R 777 /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11P

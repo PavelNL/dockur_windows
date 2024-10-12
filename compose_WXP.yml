@@ -1,12 +1,13 @@
 services:
   windows:
     image: dockurr/windows
-    container_name: windows
+    container_name: windowsxp
     environment:
-      VERSION: "winxp"
+      #VERSION: "winxp"
       RAM_SIZE: "2G"
       CPU_CORES: "2"
-      DISK_SIZE: "8G"
+      # after fresh install = 1.25GB
+      DISK_SIZE: "4G"
       MANUAL: "N"
       USERNAME: "user"
       PASSWORD: "1"
@@ -26,3 +27,9 @@ services:
       - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP/_storage_:/storage
       - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP/shared:/shared
       - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP/_oem_:/oem
+      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/_ISO_/winxpx86.iso:/custom.iso
+
+#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP/_storage_
+#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP/shared
+#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP/_oem_
+#chmod -R 777 /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP
