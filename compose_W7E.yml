@@ -5,6 +5,8 @@ services:
     environment:
       #VERSION: "win7"
       RAM_SIZE: "4G"
+      # to avoid broken memory check https://github.com/dockur/windows/issues/663
+      RAM_CHECK: "N"
       CPU_CORES: "2"
       # after fresh install = 7.4GB
       DISK_SIZE: "12G"
@@ -19,7 +21,7 @@ services:
     cap_add:
       - NET_ADMIN
     ports:
-      - 8006:8006
+      - 8886:8006
       - 3389:3389/tcp
       - 3389:3389/udp
     stop_grace_period: 2m
