@@ -6,7 +6,7 @@ services:
       #VERSION: "ltsc10"
       RAM_SIZE: "4G"
       CPU_CORES: "2"
-      # after fresh install = ??GB
+      # after fresh install = 8.2GB
       DISK_SIZE: "24G"
       MANUAL: "N"
       USERNAME: "user"
