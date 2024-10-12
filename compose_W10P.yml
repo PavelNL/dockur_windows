@@ -3,11 +3,11 @@ services:
     image: dockurr/windows
     container_name: windows10pro
     environment:
-      VERSION: "win10"
-      #VERSION: "https://example.com/win.iso"
+      #VERSION: "win10"
       RAM_SIZE: "4G"
       CPU_CORES: "2"
-      DISK_SIZE: "16G"
+      # after fresh install = 10/16GB
+      DISK_SIZE: "24G"
       MANUAL: "N"
       USERNAME: "user"
       PASSWORD: "1"
@@ -27,7 +27,7 @@ services:
       - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/_storage_:/storage
       - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/shared:/shared
       - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/_oem_:/oem
-      #- /media/LNXDATA/PAVEL_LDATA/_DOCKER_/_ISO_/win10pro.iso:/custom.iso
+      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/_ISO_/win10x64.iso:/custom.iso
 
 #mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/_storage_
 #mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/shared
