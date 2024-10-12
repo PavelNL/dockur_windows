@@ -1,0 +1,28 @@
+services:
+  windows:
+    image: dockurr/windows
+    container_name: windows
+    environment:
+      VERSION: "winxp"
+      RAM_SIZE: "2G"
+      CPU_CORES: "2"
+      DISK_SIZE: "8G"
+      MANUAL: "N"
+      USERNAME: "user"
+      PASSWORD: "1"
+      LANGUAGE: "English"
+      REGION: "en-US"
+      KEYBOARD: "en-US"
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
+    stop_grace_period: 2m
+    volumes:
+      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP/_storage_:/storage
+      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP/shared:/shared
+      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_WXP/_oem_:/oem
