@@ -3,11 +3,11 @@ services:
     image: dockurr/windows
     container_name: windows11ltsc
     environment:
-      VERSION: "ltsc11"
+      #VERSION: "ltsc11"
       RAM_SIZE: "6G"
       CPU_CORES: "2"
-      # after fresh install = ??GB
-      DISK_SIZE: "48G"
+      # after fresh install = 6GB
+      DISK_SIZE: "20G"
       MANUAL: "N"
       USERNAME: "user"
       PASSWORD: "1"
@@ -24,12 +24,13 @@ services:
       - 3389:3389/udp
     stop_grace_period: 2m
     volumes:
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11LTSC/_storage_:/storage
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11LTSC/shared:/shared
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11LTSC/_oem_:/oem
-      #- /media/LNXDATA/PAVEL_LDATA/_DOCKER_/_ISO_/xxxx.iso:/custom.iso
+      - /docker/dockurr_W11LTSC/_storage_:/storage
+      - /docker/dockurr_W11LTSC/shared:/shared
+      - /docker/dockurr_W11LTSC/_oem_:/oem
+      # ISO size = 4.3GB
+      - /docker/_ISO_/win11x64-enterprise-ltsc-eval.iso:/custom.iso
 
-#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11LTSC/_storage_
-#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11LTSC/shared
-#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11LTSC/_oem_
-#chmod -R 777 /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W11LTSC
+#mkdir -p /docker/dockurr_W11LTSC/_storage_
+#mkdir -p /docker/dockurr_W11LTSC/shared
+#mkdir -p /docker/dockurr_W11LTSC/_oem_
+#chmod -R 777 /docker/dockurr_W11LTSC

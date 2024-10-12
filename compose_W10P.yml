@@ -6,8 +6,8 @@ services:
       #VERSION: "win10"
       RAM_SIZE: "4G"
       CPU_CORES: "2"
-      # after fresh install = 10/16GB
-      DISK_SIZE: "24G"
+      # after fresh install = 10.5GB
+      DISK_SIZE: "16G"
       MANUAL: "N"
       USERNAME: "user"
       PASSWORD: "1"
@@ -24,12 +24,13 @@ services:
       - 3389:3389/udp
     stop_grace_period: 2m
     volumes:
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/_storage_:/storage
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/shared:/shared
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/_oem_:/oem
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/_ISO_/win10x64.iso:/custom.iso
+      - /docker/dockurr_W10P/_storage_:/storage
+      - /docker/dockurr_W10P/shared:/shared
+      - /docker/dockurr_W10P/_oem_:/oem
+      # ISO size = 6GB
+      - /docker/_ISO_/win10x64.iso:/custom.iso
 
-#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/_storage_
-#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/shared
-#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P/_oem_
-#chmod -R 777 /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W10P
+#mkdir -p /docker/dockurr_W10P/_storage_
+#mkdir -p /docker/dockurr_W10P/shared
+#mkdir -p /docker/dockurr_W10P/_oem_
+#chmod -R 777 /docker/dockurr_W10P

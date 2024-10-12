@@ -24,12 +24,13 @@ services:
       - 3389:3389/udp
     stop_grace_period: 2m
     volumes:
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W7E/_storage_:/storage
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W7E/shared:/shared
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W7E/_oem_:/oem
-      - /media/LNXDATA/PAVEL_LDATA/_DOCKER_/_ISO_/win7x64.iso:/custom.iso
+      - /docker/dockurr_W7E/_storage_:/storage
+      - /docker/dockurr_W7E/shared:/shared
+      - /docker/dockurr_W7E/_oem_:/oem
+      # ISO size = 3.2GB
+      - /docker/_ISO_/win7x64.iso:/custom.iso
 
-#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W7E/_storage_
-#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W7E/shared
-#mkdir -p /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W7E/_oem_
-#chmod -R 777 /media/LNXDATA/PAVEL_LDATA/_DOCKER_/dockurr_W7E
+#mkdir -p /docker/dockurr_W7E/_storage_
+#mkdir -p /docker/dockurr_W7E/shared
+#mkdir -p /docker/dockurr_W7E/_oem_
+#chmod -R 777 /docker/dockurr_W7E
